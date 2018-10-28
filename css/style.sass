@@ -1,0 +1,324 @@
+*, html, body
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    -ms-content-zooming: none
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'SF UI Text', 'San Francisco Display Medium'
+    outline: none
+   
+    
+
+input[type="submit"]
+    -webkit-appearance: none
+    -moz-appearance:    none
+    appearance:         none
+
+.wr
+    width: 1200px
+    margin-right: auto
+    margin-left: auto
+
+ul
+    list-style: none
+
+a
+    color: inherit
+    text-decoration: none
+
+img
+    max-width: 100%
+    height: auto
+
+section
+    padding: 60px 0 80px
+    
+.btn
+    width: 160px
+    height: 39px
+    border-radius: 6px
+    border: solid 2px #0096ff
+    background-color: 
+    font-size: 11px
+    font-weight: bold
+    padding: 12px 11px
+    color: #0096ff
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    align-items: center
+    justify-content: center
+    text-transform: uppercase
+
+
+.header
+    position: relative
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 100
+    height: 93px
+    display: none
+    .wr
+        height: 100%
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        justify-content: space-between
+        color: #fff
+    &_logo
+        img
+            height: 65px
+
+    &_menu
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        height: 100%
+
+    .btn
+     
+
+    ul
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        height: 100%
+        align-items: center
+
+    li
+        margin-left: 35px
+        height: 100%
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        position: relative
+
+        &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            border-top: 4px solid #E99B13
+            border-top: 4px solid #ffbf3f
+            transition: all .35s ease
+            width: 0
+
+        &:hover
+            &:after
+                width: 100%
+
+        &.active
+            &:after
+                width: 100%
+
+        & a:hover
+            opacity: 1
+
+        a
+            letter-spacing: -.2px
+            font-size: 15.5px
+            opacity: .8
+            cursor: pointer
+            height: 100%
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            align-items: center
+            transition: all .3s ease
+
+.header-phone
+    position: relative
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 100
+    height: 71px
+    padding-top: 11px
+    padding-bottom: 7px
+    .wr
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 936px
+        .phone
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            flex-direction: column
+            align-items: center
+            
+            img
+                margin-bottom: 10px
+                height: 24px
+            p
+                font-size: 12px
+                font-weight: normal
+                text-align: center
+                color: #0096ff
+                
+.banner
+    padding-top: 99px
+    padding-bottom: 128px
+    background-color: #fafcff
+    background: url(../img/1280_banner_1.png)
+    background-size: cover
+    background-repeat: no-repeat
+    height: 480px
+    background-position: 5% 70%
+    .wr
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        h1
+            color: #282d3a
+            letter-spacing: -1.1px
+            font-size: 44px
+            font-weight: bold
+            line-height: 1.14
+            margin-bottom: 14px
+            text-transform: uppercase
+        p
+            font-size: 14px
+            max-width: 100%
+            color: #85898c
+            line-height: 1.5
+            margin-bottom: 45px    
+            
+        
+    &-info
+        width: 460px
+        max-width: 100%
+.about
+    padding-top: 20px
+    padding-bottom: 35px
+    box-shadow: 7.1px 7.1px 10px 0 rgba(40, 45, 58, 0.1)
+    background-color: #ffffff
+    border-radius: 10px
+    width: 1248px
+    max-width: 100%
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    top: -20px
+    .wr
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        justify-content: space-between
+    &_block
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        width: 282px
+        img
+            height: 60px
+            margin-bottom: 17px
+        h3
+            letter-spacing: 0.3px
+            text-align: left
+            color: #282d3a
+            margin-bottom: 15px
+            text-transform: uppercase
+            font-size: 12px
+        p
+            line-height: 1.5
+            color: #85898c
+            font-size: 12px
+.products
+    .col
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: 24px
+        height: 280px
+        .product
+            height: 100%
+            border-radius: 10px
+            background-color: #12141a
+            padding-left: 34px
+            padding-right: 34px
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            flex-direction: column
+            justify-content: center
+            background-size: cover
+            background-position: center
+            
+            h3
+                margin-bottom: 15px
+                letter-spacing: 0.3px
+                color: #282d3a
+                font-size: 12px
+                text-transform: uppercase
+            h2
+                margin-bottom: 25px  
+                color: #282d3a
+                font-size: 32px
+    .col100
+        height: 340px
+        .product
+            width: 100%
+            align-items: center
+            padding-top: 20px
+            h2,h3
+                color: #fff
+    .col50
+        .product
+            width: 588px
+            max-width: 100%
+            &:nth-child(1)
+                h2, h3
+                    color: #df9d7a
+                    font-style: normal
+    .col33
+        .product
+            width: 384px
+            max-width: 100%
+            &:last-child
+                padding-top: 14px
+                h2
+                    color: #fff
+        
+            
+            
+            

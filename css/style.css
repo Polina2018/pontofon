@@ -1,0 +1,348 @@
+/* line 1, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+*, html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-content-zooming: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SF UI Text', 'San Francisco Display Medium';
+  outline: none; }
+
+/* line 13, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+/* line 18, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+.wr {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto; }
+
+/* line 23, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+ul {
+  list-style: none; }
+
+/* line 26, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+a {
+  color: inherit;
+  text-decoration: none; }
+
+/* line 30, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* line 34, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+section {
+  padding: 60px 0 80px; }
+
+/* line 37, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+.btn {
+  width: 160px;
+  height: 39px;
+  border-radius: 6px;
+  border: solid 2px #0096ff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 12px 11px;
+  color: #0096ff;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase; }
+
+/* line 57, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 93px;
+  display: none; }
+  /* line 65, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .header .wr {
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff; }
+  /* line 76, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .header_logo img {
+    height: 65px; }
+  /* line 79, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .header_menu {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    height: 100%; }
+  /* line 91, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .header ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    height: 100%;
+    align-items: center; }
+  /* line 100, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .header li {
+    margin-left: 35px;
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    position: relative; }
+    /* line 111, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .header li:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-top: 4px solid #E99B13;
+      border-top: 4px solid #ffbf3f;
+      transition: all .35s ease;
+      width: 0; }
+    /* line 123, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .header li:hover:after {
+      width: 100%; }
+    /* line 127, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .header li.active:after {
+      width: 100%; }
+    /* line 130, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .header li a:hover {
+      opacity: 1; }
+    /* line 133, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .header li a {
+      letter-spacing: -.2px;
+      font-size: 15.5px;
+      opacity: .8;
+      cursor: pointer;
+      height: 100%;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      align-items: center;
+      transition: all .3s ease; }
+
+/* line 147, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+.header-phone {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 71px;
+  padding-top: 11px;
+  padding-bottom: 7px; }
+  /* line 156, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .header-phone .wr {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 936px; }
+    /* line 165, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .header-phone .wr .phone {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      /* line 174, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+      .header-phone .wr .phone img {
+        margin-bottom: 10px;
+        height: 24px; }
+      /* line 177, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+      .header-phone .wr .phone p {
+        font-size: 12px;
+        font-weight: normal;
+        text-align: center;
+        color: #0096ff; }
+
+/* line 183, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+.banner {
+  padding-top: 99px;
+  padding-bottom: 128px;
+  background-color: #fafcff;
+  background: url(../img/1280_banner_1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 480px;
+  background-position: 5% 70%; }
+  /* line 192, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .banner .wr {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center; }
+    /* line 199, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .banner .wr h1 {
+      color: #282d3a;
+      letter-spacing: -1.1px;
+      font-size: 44px;
+      font-weight: bold;
+      line-height: 1.14;
+      margin-bottom: 14px;
+      text-transform: uppercase; }
+    /* line 207, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .banner .wr p {
+      font-size: 14px;
+      max-width: 100%;
+      color: #85898c;
+      line-height: 1.5;
+      margin-bottom: 45px; }
+  /* line 215, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .banner-info {
+    width: 460px;
+    max-width: 100%; }
+
+/* line 218, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+.about {
+  padding-top: 20px;
+  padding-bottom: 35px;
+  box-shadow: 7.1px 7.1px 10px 0 rgba(40, 45, 58, 0.1);
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 1248px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -20px; }
+  /* line 230, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .about .wr {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between; }
+  /* line 237, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .about_block {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 282px; }
+    /* line 246, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .about_block img {
+      height: 60px;
+      margin-bottom: 17px; }
+    /* line 249, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .about_block h3 {
+      letter-spacing: 0.3px;
+      text-align: left;
+      color: #282d3a;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-size: 12px; }
+    /* line 256, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .about_block p {
+      line-height: 1.5;
+      color: #85898c;
+      font-size: 12px; }
+
+/* line 261, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+.products .col {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  height: 280px; }
+  /* line 271, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .products .col .product {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #12141a;
+    padding-left: 34px;
+    padding-right: 34px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover;
+    background-position: center; }
+    /* line 287, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .products .col .product h3 {
+      margin-bottom: 15px;
+      letter-spacing: 0.3px;
+      color: #282d3a;
+      font-size: 12px;
+      text-transform: uppercase; }
+    /* line 293, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .products .col .product h2 {
+      margin-bottom: 25px;
+      color: #282d3a;
+      font-size: 32px; }
+
+/* line 297, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+.products .col100 {
+  height: 340px; }
+  /* line 299, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .products .col100 .product {
+    width: 100%;
+    align-items: center;
+    padding-top: 20px; }
+    /* line 303, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .products .col100 .product h2, .products .col100 .product h3 {
+      color: #fff; }
+
+/* line 306, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+.products .col50 .product {
+  width: 588px;
+  max-width: 100%; }
+  /* line 310, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .products .col50 .product:nth-child(1) h2, .products .col50 .product:nth-child(1) h3 {
+    color: #df9d7a;
+    font-style: normal; }
+
+/* line 314, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+.products .col33 .product {
+  width: 384px;
+  max-width: 100%; }
+  /* line 317, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+  .products .col33 .product:last-child {
+    padding-top: 14px; }
+    /* line 319, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .products .col33 .product:last-child h2 {
+      color: #fff; }
+
+/*# sourceMappingURL=style.css.map */
