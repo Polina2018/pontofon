@@ -60,10 +60,9 @@ section
     left: 0
     width: 100%
     z-index: 100
-    height: 93px
-    display: none
-    .wr
-        height: 100%
+    
+    &-top
+        height: 93px
         display: -webkit-flex
         display: -moz-flex
         display: -ms-flex
@@ -71,12 +70,30 @@ section
         display: flex
         align-items: center
         justify-content: space-between
-        color: #fff
-    &_logo
+        padding: 27px 0
+        
+    .header_logo
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        a
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            position: relative
+            top: -9px
         img
-            height: 65px
+            height: 59px
+        p
+            font-size: 12px
+            color: #282d3a
 
-    &_menu
+    .header_info
         display: -webkit-flex
         display: -moz-flex
         display: -ms-flex
@@ -85,8 +102,13 @@ section
         align-items: center
         height: 100%
 
-    .btn
-     
+        .btn
+            margin-left: 25px
+        ul
+            li
+                margin-left: 47px
+                &:first-child
+                    margin-left: 0
 
     ul
         display: -webkit-flex
@@ -95,54 +117,25 @@ section
         display: -o-flex
         display: flex
         height: 100%
-        align-items: center
-
-    li
-        margin-left: 35px
-        height: 100%
-        display: -webkit-flex
-        display: -moz-flex
-        display: -ms-flex
-        display: -o-flex
-        display: flex
-        align-items: center
-        position: relative
-
-        &:after
-            content: ''
-            position: absolute
-            bottom: 0
-            left: 0
-            width: 100%
-            border-top: 4px solid #E99B13
-            border-top: 4px solid #ffbf3f
-            transition: all .35s ease
-            width: 0
-
-        &:hover
-            &:after
-                width: 100%
-
-        &.active
-            &:after
-                width: 100%
-
-        & a:hover
-            opacity: 1
-
-        a
-            letter-spacing: -.2px
-            font-size: 15.5px
-            opacity: .8
-            cursor: pointer
-            height: 100%
-            display: -webkit-flex
-            display: -moz-flex
-            display: -ms-flex
-            display: -o-flex
-            display: flex
-            align-items: center
-            transition: all .3s ease
+        align-items: flex-start
+        li
+            width: 150px
+            
+            h3
+                font-size: 12px
+                color: #85898c
+                margin-bottom: 0px
+                font-weight: normal
+            a
+                font-size: 12px
+                color: #0096ff
+            .tel
+                font-size: 15px
+                letter-spacing: .3px
+                color: #282d3a
+                font-weight: bold
+            
+                
 
 .header-phone
     position: relative
@@ -153,7 +146,8 @@ section
     height: 71px
     padding-top: 11px
     padding-bottom: 7px
-    .wr
+    border-top: 1px solid #edeef0
+    ul
         display: -webkit-flex
         display: -moz-flex
         display: -ms-flex
@@ -162,6 +156,8 @@ section
         align-items: center
         justify-content: space-between
         width: 936px
+        margin-left: auto
+        margin-right: auto
         .phone
             display: -webkit-flex
             display: -moz-flex
@@ -176,7 +172,6 @@ section
                 height: 24px
             p
                 font-size: 12px
-                font-weight: normal
                 text-align: center
                 color: #0096ff
                 
@@ -200,7 +195,6 @@ section
             color: #282d3a
             letter-spacing: -1.1px
             font-size: 44px
-            font-weight: bold
             line-height: 1.14
             margin-bottom: 14px
             text-transform: uppercase
@@ -309,7 +303,6 @@ section
             &:nth-child(1)
                 h2, h3
                     color: #df9d7a
-                    font-style: normal
     .col33
         .product
             width: 384px
@@ -318,7 +311,384 @@ section
                 padding-top: 14px
                 h2
                     color: #fff
+.product-soon
+    position: relative
+    .soon
+        position: absolute
+        right: -4%
+        top: -13%
+        border-radius: 50%
+        width: 100px
+        height: 100px
+      
+.section_head
+    margin-bottom: 34px
+    h2
+        font-size: 32px
+        color: #282d3a
+        text-transform: uppercase
         
-            
-            
-            
+.feedback
+    padding-top: 68px
+    background-color: #f0f1f5
+    padding-bottom: 86px
+    .feedback_slider 
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        .feed
+            margin-right: 24px
+            &_text
+                width: 537px
+                height: 226px
+                border-radius: 10px
+                box-shadow: 7.1px 7.1px 10px 0 rgba(40, 45, 58, 0.05)
+                background-color: #ffffff
+                padding: 13px 26px
+                padding-right: 0
+                margin-bottom: 12px
+                p
+                    color: #282d3a
+                    font-size: 14px
+                    line-height: 1.5
+                    padding-right: 81px
+                    height: 193px
+                    overflow: scroll
+            &_author
+                display: -webkit-flex
+                display: -moz-flex
+                display: -ms-flex
+                display: -o-flex
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                .img_persone
+                    width: 50px
+                    height: 50px
+                    margin-right: 14px
+                    border-radius: 50%
+                    background: #ccc
+                h3
+                    font-size: 12px
+                    letter-spacing: 0.3px
+                    text-transform: uppercase
+                    color: #282d3a
+                    margin-bottom: 0px
+                span
+                    color: #85898c
+                    font-size: 12px
+                    width: 100%
+                    .nik
+                        color: #0096ff
+                    
+.question
+    padding-top: 70px
+    background-color: #282d3a
+    padding-bottom: 81px
+    overflow: hidden
+    position: relative
+    &:after
+        content: '?'
+        position: absolute
+        left: 59%
+        top: -12%
+        font-size: 289.5px
+        font-weight: bold
+        color: #3b455a
+        opacity: .8
+        z-index: 4
+    &:before
+        content: '?'
+        position: absolute
+        left: 88%
+        top: 55%
+        width: 136px
+        height: 211px
+        font-size: 180px
+        font-weight: bold
+        color: #3b455a
+        opacity: .8
+        z-index: 1
+    .section_head
+        z-index: 1
+        h2
+            color: #fff
+            padding-bottom: 15px
+        p
+            font-size: 14px
+            line-height: 1.5
+            color: #ced4d9
+            width: 33%
+    &_body
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        padding-top: 7px
+        position: relative
+        
+        .col1 
+            width: 792px 
+            max-width: 100%
+            z-index: 5
+            form
+                display: -webkit-flex
+                display: -moz-flex
+                display: -ms-flex
+                display: -o-flex
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+                p
+                    display: -webkit-flex
+                    display: -moz-flex
+                    display: -ms-flex
+                    display: -o-flex
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: space-between
+                    width: 100%
+                label
+                    width: 49.3%
+                    height: 39px
+                    border-radius: 2px
+                    background-color: #ffffff
+                    margin-bottom: 12px
+                    padding-left: 14px
+                    padding-right: 14px
+                    input, textarea
+                        width: 100%
+                        border-radius: 2px
+                        height: 100%
+                        border: none
+                        
+                        font-size: 14px
+                        color: #282d3a
+                .input-text
+                    width: 100%
+                    height: 110px
+                    border-radius: 2px
+                    background-color: #ffffff
+                    padding-top: 14px
+                    margin-bottom: 22px
+                    textarea
+                        color: #888a8c
+                .input-tel
+                    input
+                        color: #888a8c
+                input[type="submit"]
+                    margin-left: auto
+                    background-color: #282d3a
+                .text
+                    display: -webkit-flex
+                    display: -moz-flex
+                    display: -ms-flex
+                    display: -o-flex
+                    display: flex
+                    justify-content: space-between
+                    p
+                        font-size: 12px
+                        color: #85898c
+                        line-height: 1.5
+                        width: 69%
+        .col2
+            width: calc(100% - 792px)
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            img
+                position: relative
+                top: -70px
+                left: 30px
+                z-index: 1
+            &:after
+                position: absolute
+                top: -90%
+                left: 0
+                z-index: 0
+                content: ''
+                width: 130%
+                height: 500px
+                background: radial-gradient(#374055 10%, #282d3a 70%)
+.contacts
+    padding-top: 85px
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    &_map
+        width: 810px
+        height: 420px
+        border-radius: 10px
+        box-shadow: 7.1px 7.1px 20px 0 rgba(40, 45, 58, 0.15)
+        background-color: #e1e2e6
+        iframe
+            width: 100%
+            height: 100%
+    &_info
+        width: calc(100% - 810px)
+        padding-left: 80px
+        padding-right: 80px
+        padding-top: 33px
+        h2
+            font-size: 32px
+            color: #282d3a
+            margin-bottom: 39px
+            text-transform: uppercase
+.cont_more
+    padding-left: 2px
+    width: 65.5%
+    margin-bottom: 18px
+    h3
+        font-size: 12px
+        font-weight: normal
+        color: #85898c
+        margin-bottom: 2px
+        width: 100%
+    a
+        font-size: 12px
+        color: #0096ff
+        line-height: 1.5
+    .time
+        font-weight: bold
+        color: #282d3a
+        font-size: 12px
+        margin-top: 2px
+.cont_tel
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    align-items: center
+
+    justify-content: space-between
+    .call
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-direction: column
+    a.tel
+        color: #282d3a
+        font-size: 14px
+        line-height: 1.3em
+        font-weight: bold
+.footer
+    padding-top: 44px
+    background-color: #282d3a
+    .wr
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        .col
+            width: 25%
+            padding-bottom: 26px
+            .logo
+                margin-bottom: 4px
+                width: 139px
+                height: 40px
+                display: -webkit-flex
+                display: -moz-flex
+                display: -ms-flex
+                display: -o-flex
+                display: flex
+                position: relative
+                top: -10px
+                left: 3px
+                img
+                    width: 100%
+                    height: 100% 
+            p
+                font-size: 12px
+                color: #ffffff
+            .cont_more
+                margin-bottom: 36px
+                height: 50px
+                h3
+                    color: #acb2bf
+                    margin-bottom: 5px
+                .cont_tel
+                    margin-top: -5px
+                    display: -webkit-flex
+                    display: -moz-flex
+                    display: -ms-flex
+                    display: -o-flex
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                .tel
+                    color: #ffffff
+                .time
+                    color: #acb2bf
+                .soc
+                    display: -webkit-flex
+                    display: -moz-flex
+                    display: -ms-flex
+                    display: -o-flex
+                    display: flex
+                    a
+                        width: 30px
+                        margin-right: 6px
+                        height: 30px
+                        opacity: 0.3
+                        border-radius: 4px
+                        border: solid 1px #367ec2
+                        display: -webkit-flex
+                        display: -moz-flex
+                        display: -ms-flex
+                        display: -o-flex
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        transition: .2s all ease
+                        &:hover
+                            transition: .2s all ease
+                            opacity: 1
+                        img
+                            height: 14px
+                            width: 15px
+       
+        .col100
+            width: 100%
+            border-top: 1px solid #353c4d
+            padding-top: 20px
+            padding-bottom: 20px
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            align-items: center
+            justify-content: space-between
+            p
+                display: -webkit-flex
+                display: -moz-flex
+                display: -ms-flex
+                display: -o-flex
+                display: flex
+                align-items: center
+                a
+                    color: #0096ff
+                    padding-left: 3px
+                    padding-right: 5px
+                    position: relative
+                img
+                    width: 14px
+                    height: 14px
+                    
+                    
