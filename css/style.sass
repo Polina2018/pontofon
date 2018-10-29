@@ -939,18 +939,22 @@ section
         display: -o-flex
         display: flex
         justify-content: space-between
-        padding: 25px 17px
+       
+        margin-bottom: 12px
         &_imgs
             width: 220px
             max-width: 100%
+            position: relative
             .img
-                background-size: contain !important
+                background-size: cover !important
                 background-position: center !important
                 background-repeat: no-repeat !important
                 width: 100%
                 height: 100%
         &_info
             width: 168px
+            padding: 25px 17px
+            padding-right: 0
             h3
                 font-size: 14px
                 color: #282d3a
@@ -992,6 +996,8 @@ section
                 
         &_desc
             width: 367px
+            padding: 25px 17px
+            padding-left: 0
             .card_desc-more
                 margin-bottom: 13px
                 p
@@ -1008,4 +1014,24 @@ section
                     width: 100%
                     font-size: 12px
                     border-bottom: 1px dotted #0096ff
-        
+.new 
+    display: none
+.new.active   
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 5px
+    left: 5px
+    font-size: 10px
+    color: #fff
+    font-weight: bold
+    width: 67px
+    height: 18px
+    border-radius: 4px
+    background-color: #282d3a
+    
