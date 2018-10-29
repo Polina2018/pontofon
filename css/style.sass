@@ -952,9 +952,16 @@ section
                 width: 100%
                 height: 100%
         &_info
-            width: 168px
+            width: calc(100% - 220px)
             padding: 25px 17px
-            padding-right: 0
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            justify-content: space-between
+        .card_info-col1
+            width: 30%
             h3
                 font-size: 14px
                 color: #282d3a
@@ -994,10 +1001,9 @@ section
                 color: #282d3a
                 margin-bottom: 26px
                 
-        &_desc
-            width: 367px
-            padding: 25px 17px
-            padding-left: 0
+        .card_info-col2
+            width: 60%
+            
             .card_desc-more
                 margin-bottom: 13px
                 p

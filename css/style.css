@@ -1078,28 +1078,36 @@ section {
         height: 100%; }
     /* line 954, /Applications/MAMP/htdocs/pontofon/css/style.sass */
     .col_cards .card_info {
-      width: 168px;
+      width: calc(100% - 220px);
       padding: 25px 17px;
-      padding-right: 0; }
-      /* line 958, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-      .col_cards .card_info h3 {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between; }
+    /* line 963, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .col_cards .card .card_info-col1 {
+      width: 30%; }
+      /* line 965, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+      .col_cards .card .card_info-col1 h3 {
         font-size: 14px;
         color: #282d3a;
         margin-bottom: 10px; }
-      /* line 962, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-      .col_cards .card_info .available {
+      /* line 969, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+      .col_cards .card .card_info-col1 .available {
         display: none;
         padding-left: 17px;
         color: #282d3a;
         font-size: 12px;
         position: relative; }
-      /* line 968, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-      .col_cards .card_info .available.active {
+      /* line 975, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+      .col_cards .card .card_info-col1 .available.active {
         position: relative;
         display: block;
         margin-bottom: 19px; }
-        /* line 972, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-        .col_cards .card_info .available.active:before {
+        /* line 979, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+        .col_cards .card .card_info-col1 .available.active:before {
           background: url(../img/v_nalichii.svg);
           background-size: contain;
           background-repeat: no-repeat;
@@ -1110,54 +1118,52 @@ section {
           transform: translateY(-50%);
           content: '';
           position: absolute; }
-      /* line 983, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-      .col_cards .card_info .card_info-more {
+      /* line 990, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+      .col_cards .card .card_info-col1 .card_info-more {
         margin-bottom: 13px; }
-        /* line 985, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-        .col_cards .card_info .card_info-more p {
+        /* line 992, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+        .col_cards .card .card_info-col1 .card_info-more p {
           font-size: 12px;
           color: #85898c;
           margin-bottom: 7px; }
-        /* line 989, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-        .col_cards .card_info .card_info-more span {
+        /* line 996, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+        .col_cards .card .card_info-col1 .card_info-more span {
           color: #282d3a;
           font-weight: bold; }
-      /* line 992, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-      .col_cards .card_info .price {
+      /* line 999, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+      .col_cards .card .card_info-col1 .price {
         font-size: 24px;
         color: #282d3a;
         margin-bottom: 26px; }
-    /* line 997, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-    .col_cards .card_desc {
-      width: 367px;
-      padding: 25px 17px;
-      padding-left: 0; }
-      /* line 1001, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-      .col_cards .card_desc .card_desc-more {
+    /* line 1004, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+    .col_cards .card .card_info-col2 {
+      width: 60%; }
+      /* line 1007, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+      .col_cards .card .card_info-col2 .card_desc-more {
         margin-bottom: 13px; }
-        /* line 1003, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-        .col_cards .card_desc .card_desc-more p {
+        /* line 1009, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+        .col_cards .card .card_info-col2 .card_desc-more p {
           font-size: 12px;
           margin-bottom: 7px;
           color: #8b8c8c;
           line-height: 1.5;
           max-height: 70px;
           overflow: hidden; }
-        /* line 1010, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-        .col_cards .card_desc .card_desc-more span {
+        /* line 1016, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+        .col_cards .card .card_info-col2 .card_desc-more span {
           color: #0b0f17; }
-        /* line 1012, /Applications/MAMP/htdocs/pontofon/css/style.sass */
-        .col_cards .card_desc .card_desc-more a {
+        /* line 1018, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+        .col_cards .card .card_info-col2 .card_desc-more a {
           color: #0096ff;
           width: 100%;
           font-size: 12px;
           border-bottom: 1px dotted #0096ff; }
 
-/* line 1017, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+/* line 1023, /Applications/MAMP/htdocs/pontofon/css/style.sass */
 .new {
   display: none; }
 
-/* line 1019, /Applications/MAMP/htdocs/pontofon/css/style.sass */
+/* line 1025, /Applications/MAMP/htdocs/pontofon/css/style.sass */
 .new.active {
   display: -webkit-flex;
   display: -moz-flex;
