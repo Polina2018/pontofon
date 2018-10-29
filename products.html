@@ -49,27 +49,27 @@
                     </li>
                     <li>
                         <a href="" class="phone"> <img src="img/iphone_6.svg" alt="">
-                            <p>iPhone 5S</p>
+                            <p>iPhone SE</p>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="phone"> <img src="img/iphone_6.svg" alt="">
-                            <p>iPhone 5S</p>
+                        <a href="" class="phone plus"> <img src="img/iphone_and_plus.svg" alt="">
+                            <p>iPhone 6, Plus</p>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="phone"> <img src="img/iphone_6.svg" alt="">
-                            <p>iPhone 5S</p>
+                        <a href="" class="phone plus"> <img src="img/iphone_and_plus.svg" alt="">
+                            <p>iPhone 7, Plus</p>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="phone"> <img src="img/iphone_6.svg" alt="">
-                            <p>iPhone 5S</p>
+                        <a href="" class="phone plus"> <img src="img/iphone_and_plus.svg" alt="">
+                            <p>iPhone 8, Plus</p>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="phone"> <img src="img/iphone_6.svg" alt="">
-                            <p>iPhone 5S</p>
+                        <a href="" class="phone"> <img src="img/iphone_X.svg" alt="">
+                            <p>iPhone X</p>
                         </a>
                     </li>
                     <li>
@@ -78,8 +78,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="phone"> <img src="img/iphone_6.svg" alt="">
-                            <p>iPhone 5S</p>
+                        <a href="" class="phone all"> <img src="img/iphone_all.svg" alt="">
+                            <p>Все модели</p>
                         </a>
                     </li>
                 </ul>
@@ -233,7 +233,7 @@
                     <h3>Сортировать:</h3>
                     <ul>
                         <li class=""><a href="">сначала дешевые</a></li>
-                        <li class="acitve"><a href="">сначала дорогие</a></li>
+                        <li class="active"><a href="">сначала дорогие</a></li>
                     </ul>
                 </div>
                 <div class="cards_body">
@@ -259,7 +259,7 @@
 для SIM-лотка </span></p>
                             </div>
                             <div class="card_desc-more card_desc-character">
-                                <p>Характеристики:<span>
+                                <p class="show-p">Характеристики:<span>
 Диагональ дисплея: 5,8'' / 2436х1125 / Super Retina HD (OLED)
 / 16 млн / GSM, 3G (WCDMA/UMTS), 2G (EDGE), 4G (LTE) /
 1 слот для SIM-карты / Nano-SIM / Apple iOS / А11 Bionic /
@@ -267,7 +267,7 @@
 7 Мп / Есть / 802.11 ac / Версия 5.0 / A-GPS, GPS / Есть /
 Lightning / До 21 ч / Есть / Смартфон, адаптер питания,
 кабель USB / Металл, стекло / 143,6 мм / 70,9 мм / 7,7 мм /
-174 г / Серый / 1 год / Китай / Apple</span></p><a href="" class="show">Показать полностью</a>
+174 г / Серый / 1 год / Китай / Apple</span></p><a href="javascript:void(0);" class="show">Показать полностью</a>
                             </div>
                         </div>
                     </div>
@@ -326,6 +326,15 @@ Lightning / До 21 ч / Есть / Смартфон, адаптер питан�
                 }
                 else {
                     $(this).addClass('active');
+                }
+            });
+            $('.show').click(function () {
+                if ($('.show-p').css('overflow', 'hidden')){ 
+                    $('.show-p').css('overflow', 'visible');
+                    
+                }
+                else {
+                    $(this).css('overflow', 'hidden');
                 }
             });
         });
