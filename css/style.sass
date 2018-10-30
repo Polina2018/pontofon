@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic')
 *, html, body
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
@@ -14,7 +15,7 @@ input[type="submit"]
     -webkit-appearance: none
     -moz-appearance: none
     appearance: none
-
+    cursor: pointer
 .wr
     width: 1200px
     margin-right: auto
@@ -52,7 +53,12 @@ section
     align-items: center
     justify-content: center
     text-transform: uppercase
-
+    transition: all .2s linear
+    &:hover
+        box-shadow: 0 0 10px 0 rgba(0, 126, 217, 0.5)
+        background-color: #0096ff
+        color: #fff
+        transition: all .2s linear
 
 .header
     position: relative
@@ -153,11 +159,13 @@ section
         display: -ms-flex
         display: -o-flex
         display: flex
-        align-items: center
+        align-items: flex-end
         justify-content: space-between
         width: 936px
         margin-left: auto
         margin-right: auto
+        li
+            width: auto
         .phone
             display: -webkit-flex
             display: -moz-flex
@@ -169,16 +177,20 @@ section
             
             img
                 margin-bottom: 6px
-                height: 27px
+                height: 28px
                
 
-                p
+            p
                 font-size: 12px
                 text-align: center
                 color: #0096ff
+                height: calc(100% - 28px)
+                font-weight: normal
         .plus
             img
-               
+                height: 33px
+            p
+                height: calc(100% - 33px)
   
                 
 .banner
@@ -488,6 +500,7 @@ section
                 input[type="submit"]
                     margin-left: auto
                     background-color: #282d3a
+                    cursor: pointer
                 .text
                     display: -webkit-flex
                     display: -moz-flex
@@ -591,7 +604,7 @@ section
         line-height: 1.3em
         font-weight: bold
 .footer
-    padding-top: 44px
+    padding-top: 42px
     background-color: #282d3a
     .wr
         display: -webkit-flex
@@ -602,8 +615,14 @@ section
         flex-wrap: wrap
         justify-content: space-between
         .col
-            width: 25%
+            width: 24%
             padding-bottom: 26px
+            &:nth-child(2)
+                width: 23%
+            &:nth-child(3)
+                width: 25%
+            &:nth-child(4)
+                width: 24%
             .logo
                 margin-bottom: 4px
                 width: 139px
@@ -624,7 +643,10 @@ section
                 color: #ffffff
             .cont_more
                 margin-bottom: 36px
-                height: 50px
+                height: 70px
+                &:nth-child(1)
+                    h3
+                        margin-bottom: 11px
                 h3
                     color: #acb2bf
                     margin-bottom: 5px
@@ -702,7 +724,7 @@ section
     &:after
         position: absolute
         left: 50%
-        top: 25%
+        top: 29%
         transform: translate(-50%, -50%)
         content: 'Скоро'
         font-size: 10px
@@ -723,6 +745,7 @@ section
 .section
     background: #f0f2f5
     padding-top: 5px
+    padding-bottom: 140px
     .wr
         display: -webkit-flex
         display: -moz-flex
@@ -733,7 +756,7 @@ section
         justify-content: space-between
 .breadcrumbs
     padding-top: 26px
-    padding-bottom: 26px
+    padding-bottom: 17px
     display: -webkit-flex
     display: -moz-flex
     display: -ms-flex
@@ -781,25 +804,34 @@ section
     .filter_body
         border-radius: 4px
         background-color: #ffffff
-        padding: 24px
+        padding: 22px 24px
+        padding-bottom: 10px
         .head
             font-size: 12px
             color: #282d3a
             letter-spacing: 0.3px
-            margin-bottom: 20px
+            margin-bottom: 15px
             text-transform: uppercase
             font-weight: bold
     .list
         width: 100%
-        padding-top: 25px
+        padding-top: 23px
         padding-bottom: 25px
         border-bottom: 1px solid #edeef0      
         width: 100%
         &:last-child
             border-bottom: 0
             padding-bottom: 0
+        &:nth-child(2)
+            padding-bottom: 8px
+            .filter
+                li
+        &:nth-child(3)
+            padding-top: 27px
+        padding-bottom: 5px
         &:first-child
             padding-top: 0
+            height: 121px
         .filter
             display: -webkit-flex
             display: -moz-flex
@@ -816,10 +848,11 @@ section
             display: -o-flex
             display: flex
             align-items: flex-start
-            margin-bottom: 20px
+            margin-bottom: 16px
             color: #282d3a
             font-size: 12px
-            
+            &:nth-child(2n)
+                padding-left: 7px
         input[type=checkbox]
             display: none
         input ~ label 
@@ -838,7 +871,7 @@ section
             border: 0.1em solid #282d3a
             border-radius: 2px
             position: relative
-            margin-right: 5px
+            margin-right: 10px
             top: 1px
         li.active
             
@@ -877,6 +910,7 @@ section
             display: -o-flex
             display: flex
             align-items: center
+            height: 60px
             p
                 color: #85898c
                 font-size: 12px
@@ -928,7 +962,8 @@ section
             li.active
                 color: #0096ff
                 
-    
+    .cards_body
+        position: relative
     .card
         border-radius: 4px
         box-shadow: 4.9px 4.9px 6px 0 rgba(40, 45, 58, 0.04)
@@ -939,88 +974,124 @@ section
         display: -o-flex
         display: flex
         justify-content: space-between
-       
+        position: relative
         margin-bottom: 12px
-        &_imgs
-            width: 220px
-            max-width: 100%
+        transition: all .2s ease
+        &:hover
+            transition: all .2s ease
+            box-shadow: 4.9px 4.9px 6px 0 rgba(40, 45, 58, 0.12)
+            .card_info-col1
+                .price
+                    color: #ff005e
+                    transition: all .2s ease
+    
+.card_imgs
+    width: 220px
+    max-width: 100%
+    position: relative
+    border-radius: 4px 0 0 4px
+    .img
+        background-size: cover !important
+        background-position: center !important
+        background-repeat: no-repeat !important
+        width: 100%
+        height: 100%
+        border-radius: 4px 0 0 4px
+.card_info
+    width: calc(100% - 220px)
+    padding: 21px 24px 23px
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    justify-content: space-between
+.card_info-col1
+    width: 30%
+    position: relative
+    h3
+        font-size: 14px
+        color: #282d3a
+        margin-bottom: 10px
+    .available
+        display: none
+        padding-left: 19px
+        color: #282d3a
+        font-size: 12px
+        position: relative
+    .available.active
+        position: relative
+        display: block
+        margin-bottom: 15px
+        &:before
+            background: url(../img/v_nalichii.svg)
+            background-size: contain
+            background-repeat: no-repeat
+            width: 14px
+            height: 14px
+            left: 0%
+            top: 50%
+            transform: translateY(-50%)
+            content: ''
+            position: absolute
+    .card_info-more
+        margin-bottom: 12px
+        p
+            font-size: 12px
+            color: #85898c
+            margin-bottom: 7px
+        span
+            color: #282d3a
+            font-weight: bold
+    .price
+        font-size: 24px
+        color: #282d3a
+        margin-bottom: 26px
+    .btn
+        transition: all .2s linear
+        &:hover
+            box-shadow: 0 0 10px 0 rgba(0, 126, 217, 0.5)
+            background-color: #0096ff
+            color: #fff
+            transition: all .2s linear
+.card_info-col2
+    width: 57.5%
+
+    .card_desc-more
+        margin-bottom: 13px
+        p
+            font-size: 12px
+            margin-bottom: 0px
+            color: #8b8c8c
+            line-height: 1.5
+            max-height: 104px
+            overflow: hidden
             position: relative
-            .img
-                background-size: cover !important
-                background-position: center !important
-                background-repeat: no-repeat !important
-                width: 100%
-                height: 100%
-        &_info
-            width: calc(100% - 220px)
-            padding: 25px 17px
+        .show-p
             display: -webkit-flex
             display: -moz-flex
             display: -ms-flex
             display: -o-flex
             display: flex
-            justify-content: space-between
-        .card_info-col1
-            width: 30%
-            h3
-                font-size: 14px
-                color: #282d3a
-                margin-bottom: 10px
-            .available
-                display: none
-                padding-left: 17px
-                color: #282d3a
-                font-size: 12px
-                position: relative
-            .available.active
-                position: relative
-                display: block
-                margin-bottom: 19px
-                &:before
-                    background: url(../img/v_nalichii.svg)
-                    background-size: contain
-                    background-repeat: no-repeat
-                    width: 14px
-                    height: 14px
-                    left: 0%
-                    top: 50%
-                    transform: translateY(-50%)
-                    content: ''
-                    position: absolute
-            .card_info-more
-                margin-bottom: 13px
-                p
-                    font-size: 12px
-                    color: #85898c
-                    margin-bottom: 7px
-                span
-                    color: #282d3a
-                    font-weight: bold
-            .price
-                font-size: 24px
-                color: #282d3a
-                margin-bottom: 26px
-                
-        .card_info-col2
-            width: 60%
-            
-            .card_desc-more
-                margin-bottom: 13px
-                p
-                    font-size: 12px
-                    margin-bottom: 7px
-                    color: #8b8c8c
-                    line-height: 1.5
-                    max-height: 70px
-                    overflow: hidden
-                span
-                    color: #0b0f17
-                a
-                    color: #0096ff
-                    width: 100%
-                    font-size: 12px
-                    border-bottom: 1px dotted #0096ff
-.new 
+            flex-direction: column
+            &:after
+                position: absolute
+                content: ''
+                bottom: 0
+                height: 60px
+                left: 0
+                background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.84) 57%, rgba(255,255,255,0.2) 100%);
+                width: 100%
+            span
+                width: 100%
+        span
+            color: #0b0f17
+        a
+            color: #0096ff
+            width: 100%
+            font-size: 12px
+            border-bottom: 1px dotted #0096ff
+.new, .hot, .price_old
     display: none
 .new.active   
     display: -webkit-flex
@@ -1031,8 +1102,8 @@ section
     align-items: center
     justify-content: center
     position: absolute
-    top: 5px
-    left: 5px
+    top: 7px
+    left: 7px
     font-size: 10px
     color: #fff
     font-weight: bold
@@ -1040,4 +1111,469 @@ section
     height: 18px
     border-radius: 4px
     background-color: #282d3a
-    
+.hot.active
+    position: absolute
+    background: url(../img/fire_label.svg)
+    background-size: contain !important
+    background-repeat: no-repeat !important
+    display: block
+    width: 40px
+    height: 40px
+    right: 10px
+    top: 10px
+.price_old.active
+    color: #85898c
+    font-size: 12px
+    position: absolute
+    bottom: 47px
+    left: 0
+    font-family: 'Open Sans', sans-serif
+    display: block
+    color: #85898c
+    &:after
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        border-top: 1px solid #85898c
+        width: 100%
+        content: ''
+.screen-reader-text
+    display: none
+.show_more
+    border-radius: 4px
+    position: absolute
+    bottom: -6.2%
+    right: 0
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-left: 19px
+    width: 203px
+    height: 39px
+    border: solid 1px #0096ff
+    font-size: 12px
+    color: #0096ff
+    &:before
+        background: url(../img/show_more.svg)
+        background-size: contain
+        background-repeat: no-repeat
+        width: 12px
+        height: 12px
+        left: 8%
+        top: 50%
+        transform: translateY(-50%)
+        content: ''
+        position: absolute
+.pagination 
+    display: inline-block
+    border-radius: 4px
+    position: absolute
+    bottom: -6.2%
+    width: 256px
+    .nav-links
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+    .page-numbers
+        font-size: 14px
+        width: 7px
+        color: #0096ff
+    .current, .dots
+        color: #282d3a
+    .prev, .next
+        width: 39px
+        height: 39px
+        opacity: 0.3
+        border-radius: 4px
+        background: #e3e4e5
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        transition: all .2s ease
+        &:after
+            background: url(../img/arrow_slide.svg) !important
+            background-repeat: no-repeat !important
+            background-size: contain !important
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 14px
+            width: 10px
+            transition: all .2s ease
+        &:hover
+            background: #fff
+            opacity: 1
+            transition: all .2s ease
+    .next
+        &:after
+            transform: translate(-50%, -50%) rotate(180deg)
+.col_filter
+    .docs
+        width: 272px
+        
+        
+        
+        li
+            border: solid 1px #e3e4e5
+            height: 39px
+            width: 100%
+           
+            color: #282d3a
+            font-size: 12px
+            padding: 0 19px
+            a
+                width: 100%
+                height: 100%
+                display: -webkit-flex
+                display: -moz-flex
+                display: -ms-flex
+                display: -o-flex
+                display: flex
+                align-items: center
+            &:last-child
+                border-top: none
+        li.active
+            color: #0096ff
+.section-confidential
+    padding-bottom: 80px
+    .col_cards
+        h2
+            font-size: 32px
+            color: #282d3a
+            text-align: justify
+        p, li
+            font-size: 14px
+            color: #282d3a
+            line-height: 21px
+            margin-top: 26px
+            margin-bottom: 26px
+            text-align: justify
+.md
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,.8)
+    z-index: 100
+    display: none
+    &_back
+        width: 100%
+        height: 100%
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    .close
+        width: 15px
+        height: 15px
+        padding: 20px
+        background-image: url(../img/cross.svg)
+        background-size: 15px !important
+        background-position: center
+        background-repeat: no-repeat
+        margin-bottom: 20px
+        position: absolute
+        right: 0
+        top: 0
+    .md_cont
+        width: 588px
+        height: 655px
+        margin-right: auto
+        margin-left: auto
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 30px 34px
+        background: #fff
+        max-width: 85%
+        position: relative
+        box-shadow: 4.9px 4.9px 6px 0 rgba(40, 45, 58, 0.04)
+        h2
+            font-size: 24px
+            color: #282d3a
+            width: 100%
+            margin-bottom: 15px
+            text-align: center
+            
+        p
+            font-size: 12px
+            color: #85898c
+            line-height: 1.5
+            text-align: center
+            margin-bottom: 17px
+
+			
+        form
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            padding-top: 34px
+            position: relative
+            padding-bottom: 8px
+            z-index: 5
+            width: 100%
+            border-top: 1px solid #edeef0
+            label
+                display: -webkit-flex
+                display: -moz-flex
+                display: -ms-flex
+                display: -o-flex
+                display: flex
+                width: 100%
+                margin-bottom: 12px
+
+                input
+                    padding: 12px 15px
+
+                span
+                    font-size: 16px
+                    color: #817577
+
+        
+        
+.md
+    .card_info
+        width: 100%
+        .card_imgs
+            width: 140px
+        .card_info-col1
+            width: calc(100% - 140px)
+        .card_info-more
+            margin-bottom: 8px
+            p
+                text-align: left
+                font-size: 12px
+                color: #85898c
+                margin-bottom: 2px
+    form
+        width: 100%
+        margin-left: auto
+        margin-right: auto
+        flex-direction: column
+        p
+            
+        input
+            margin-left: auto
+            margin-right: auto
+            font-size: 14px
+            height: 39px
+            width: 390px
+            color: #282d3a
+            border: 1px solid #e3e4e5
+            border-radius: 2px
+        input::placeholder
+            color: #85898c
+            font-size: 14px
+        input[type="submit"]
+            margin-top: 22px
+            margin-bottom: 22px
+            -webkit-appearance: none
+            width: 160px
+            height: 39px
+            border-radius: 6px
+            border: solid 2px #0096ff
+            font-size: 11px
+            font-weight: bold
+            padding: 12px 11px
+            color: #0096ff
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            align-items: center
+            justify-content: center
+            text-transform: uppercase
+            margin-left: auto
+            margin-right: auto
+            cursor: pointer
+        .agree
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            align-items: flex-start
+            width: 355px
+            max-width: 100%
+            margin-left: auto
+            margin-right: auto
+            text-align: center
+            
+            label
+                font-size: 12px
+                color: #85898c
+                line-height: 1.5
+                a
+                    color: #0096ff
+            input[type=checkbox]
+                display: none
+            input ~ label 
+                cursor: pointer
+                width: 100%
+                display: inline-block
+            input ~ label > span
+                height: 12px
+                width: 12px
+                text-align: center
+                vertical-align: bottom
+                border: 1px solid #282d3a
+                border-radius: 2px
+                position: relative
+                margin-right: 6px
+                top: -3px
+                display: inline-block
+        .agree.active
+            
+            span
+                background: #282d3a
+                &:before
+                    background: url(../img/galochka.svg)
+                    background-size: contain
+                    background-repeat: no-repeat
+                    width: 8px
+                    height: 8px
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    content: ''
+                    position: absolute
+.md2
+   .md_cont
+        width: 588px
+        padding: 43px 70px
+        border-radius: 4px
+        box-shadow: 4.9px 4.9px 6px 0 rgba(40, 45, 58, 0.04)
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        justify-content: center
+        height: auto
+        h2
+            font-weight: normal
+            margin-bottom: 15px
+        img
+            height: 70px
+            width: 70px
+            margin-bottom: 31px
+        .text_info
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            margin-bottom: 31px
+            p
+                font-size: 12px
+                color: #85898c
+                margin-bottom: 0
+            .strong
+                color: #282d3a
+            span
+                color: #ff005e
+.md3
+    .md_cont
+        width: 588px
+        padding: 30px 90px
+        border-radius: 4px
+        box-shadow: 4.9px 4.9px 6px 0 rgba(40, 45, 58, 0.04)
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        align-items: center
+        justify-content: center
+        height: auto
+        p
+            margin-bottom: 0
+        form
+            align-items: center
+            justify-content: center
+            border-top: none
+            padding-bottom: 0
+            p
+                display: -webkit-flex
+                display: -moz-flex
+                display: -ms-flex
+                display: -o-flex
+                display: flex
+                align-items: center
+                justify-content: center
+            .btn
+                margin-top: 12px
+.md4
+    .md_cont 
+        padding: 40px 70px
+        img
+            margin-bottom: 26px
+        .btn-back
+            margin-top: 13px
+.error-page
+    padding-top: 190px
+    padding-bottom: 260px
+    background-color: #f0f2f5
+    .wr
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        .page-name
+            display: -webkit-flex
+            display: -moz-flex
+            display: -ms-flex
+            display: -o-flex
+            display: flex
+            align-items: center
+            margin-bottom: 17px
+            h1
+                font-size: 80px
+                color: #282d3a
+                font-weight: bold
+            img
+                height: 82px
+                width: 82px
+        p
+            width: 494px
+            max-width: 100%
+            font-size: 14px
+            text-align: center
+            color: #282d3a
+            margin-bottom: 31px
+.none
+    display: none
