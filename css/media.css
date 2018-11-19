@@ -1,0 +1,20 @@
+@media (max-width: 1300px) {
+    .wr {
+        max-width: 95%
+    }
+}
+@media (max-width: 1100px) {
+       .footer .wr .col {
+        width: 33%;
+    }
+    .footer .wr .col100 {
+        width: 100%
+    }
+}
+@media (max-width: 768px) {
+    
+    .header-phone ul {
+        flex-wrap: wrap
+    }
+ 
+}
